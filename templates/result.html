@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Descarga lista</title>
+  <style>
+    body { font-family: Arial; max-width: 700px; margin: 40px auto; }
+    a { display: inline-block; padding: 10px 20px; border: 1px solid #333; border-radius: 5px; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <h2>✅ Descarga completada</h2>
+  <p>Tu archivo está listo:</p>
+
+  <a href="{{ url_for('serve_file', filename=filename) }}">Descargar {{ filename }}</a>
+
+  <br><br>
+
+  <a href="{{ url_for('index') }}">Volver</a>
+
+</body>
+</html>
+

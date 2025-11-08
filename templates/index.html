@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Descargar Video</title>
+  <style>
+    body { font-family: Arial; max-width: 700px; margin: 40px auto; }
+    input { width: 100%; padding: 10px; margin-top: 10px; }
+    button { padding: 10px 20px; margin-top: 10px; }
+    .flash { background: #ffd2d2; padding: 10px; border-radius: 5px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Descargar Video de YouTube / TikTok / Instagram</h2>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="flash">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <form method="POST">
+    <label>Ingresa la URL del video:</label>
+    <input type="text" name="url" placeholder="https://youtube.com/...">
+    <button type="submit">Descargar</button>
+  </form>
+</body>
+</html>
+
